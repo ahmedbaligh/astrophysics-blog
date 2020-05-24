@@ -1,10 +1,10 @@
-@import url(/styles/styles.css);
+@import url(./styles.css);
+
+@import url(./resposive.css);
+
+@import url(./main.css);
 
 @import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@1,500&family=Caveat:wght@400;700&family=Comfortaa:wght@700&family=Montserrat:ital,wght@0,600;1,600&family=Orbitron:wght@600&display=swap');
-
-@import url(/styles/resposive.css);
-
-@import url(/styles/main.css);
 
      /* --------------------------------------------- Global ------------------------------------------------- */
 
@@ -201,7 +201,7 @@ figcaption {
 /* ----------------------------------------------------- Resposive --------------------------------------------------- */
 
 
-@media(min-width: 360px) and (max-width: 1299px){
+@media(min-width: 324px) and (max-width: 1320px){
 
          /* -------------------- Global -------------------------- */
 
