@@ -1,0 +1,326 @@
+@import url(/styles/styles.css);
+
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@1,500&family=Caveat:wght@400;700&family=Comfortaa:wght@700&family=Montserrat:ital,wght@0,600;1,600&family=Orbitron:wght@600&display=swap');
+
+@import url(/styles/resposive.css);
+
+@import url(/styles/main.css);
+
+     /* --------------------------------------------- Global ------------------------------------------------- */
+
+main {
+    width: inherit;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: start;
+}
+
+     /* ---------------------------------------------- Posts ------------------------------------------------ */
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    border: solid 1px #dce3e5;
+    background-color: rgba(238, 238, 238, 0.5);
+}
+
+.post-header {
+    display: flex;
+    flex-direction: column;
+    margin: 0 50px 0;
+    border-bottom: solid 2px #dce3e5;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.post-title {
+    margin: 15px 0 10px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2rem;
+}
+
+.author, time {
+    margin: 0;
+    font-size: 0.8em;
+}
+
+.share-menu {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.post-header img {
+	width: 45px;
+	height: 45px;
+	margin: 5px;
+	padding: 10px;
+}
+
+.post-header img:hover {
+	border-radius: 100%;
+	background-color: rgba(0, 110, 255, 0.808);
+}
+
+.post-content {
+    display: flex;
+    flex-direction: column;
+    margin: 25px 50px 0;
+    align-items: left;
+    justify-content: space-around;
+}
+
+.post-content h3 {
+    text-decoration: underline;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.3em;
+    line-height: 1;
+    margin: 15px 0 0px;
+}
+
+.post-content h4 {
+    font-style: italic;
+    text-decoration: underline;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.1em;
+    margin: 25px 0 10px;
+    line-height: 0.7;
+}
+
+.post-content img {
+    width: 480px;
+    height: 360px;  
+    border-radius: 10px;
+}
+
+figcaption {
+    font-style: italic;
+    font-size: small;
+}
+
+.author-info {
+    display: flex;
+    flex-direction: column;
+    margin: 50px;
+    justify-content: space-evenly;
+    border-top: solid 2px #dce3e5;
+    padding-top: 20px;
+
+}
+
+.post-footer p {
+    font-style: italic;
+    font-size: large;
+    margin: 5px 0;
+}
+
+.author p {
+    font-style: normal;
+    font-weight: 700;
+    font-size: larger;
+
+}
+
+.post-footer img {
+    width: 50px;
+    height: 50px;
+    float: left;
+    margin: 0 20px 10px 0;
+}
+
+.bio {
+    margin: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: small;
+}
+
+.bio p {
+    font-size: medium;
+    font-style: italic;
+}
+
+
+    /* -------------------------------------------- Popular Reads ------------------------------------------- */
+
+
+.side-bar {
+    order: 1;
+    background-color: rgba(238, 238, 238, 0.5);
+	border: solid 1px #dce3e5;
+    margin: 30px 60px 0 0;
+}
+
+.side-bar:before {
+    display: block;
+    background-image: linear-gradient(-272deg,#206584,#83d0f2);
+    content: '';
+    height: 4px;
+    margin-bottom: 20px;
+}
+
+.side-bar-menu {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 0 20px 20px 20px;
+}
+
+.side-bar-title {
+	font-family: 'Comfortaa', cursive;
+	margin: 25px 70px 40px;
+	padding: 0 0 0 10px;
+    font-size: 1.4rem;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.side-bar-menu p {
+    width: 240px;
+    margin-left: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: large;
+    font-weight: 400;
+    line-height: 1.2;
+    color: #3d7e9a;
+}
+
+.side-bar-menu a:hover {
+	color: rgba(0, 110, 255, 0.808);
+}
+
+.side-bar img {
+    width: 100px;
+    height: 70px;
+    border-radius: 8px;
+}
+
+
+/* ----------------------------------------------------- Resposive --------------------------------------------------- */
+
+
+@media(min-width: 360px) and (max-width: 1299px){
+
+         /* -------------------- Global -------------------------- */
+
+    main {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+        /* ---------------------- Posts -------------------------- */
+
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: 85%;
+    }
+
+    .post-title {
+        font-size: 1.4rem;
+    }
+
+    .author, time {
+        font-size: 0.7em;
+    }
+
+    .post-header img {
+        width: 37px;
+        height: 37px;
+    }
+
+    .post-content {
+        margin: 25px;
+        justify-content: space-between;
+    }
+
+    .post-content h3 {
+        font-size: 1.15em;
+        font-style: normal;
+    }
+
+    .post-content h4 {
+        font-size: 1em;
+        margin: 20px 0 0;
+        line-height: 1;
+    }
+
+    .post-content p {
+        margin: 15px 0px 10px;
+		width: 92%;
+		font-size: small;
+    }
+
+    .post-content img {
+        width: 92%;
+		height: 60%;
+    }
+
+    .author-info {
+        margin: 25px;
+        justify-content: space-around;
+    }
+
+    .post-footer > p {
+		width: 92%;
+        font-size: medium;
+        margin: 5px 0 15px;
+        text-decoration: underline;
+    }
+
+    .post-footer p {
+		width: 92%;
+        font-size: small;
+        font-style: normal;
+    }
+
+    .author p {
+        font-size: medium;
+        width: 92%;
+    }
+
+    .post-footer img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .bio p {
+        font-size: small;
+        font-weight: 500;
+        font-style: italic;
+    }
+
+
+        /* -------------------- Popular Reads ---------------------- */
+
+
+    .side-bar {
+        margin: 30px 0 0;
+		padding: 0 0 50px;
+        width: 85%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 10px 6em repeat(5, 1fr);
+    }
+
+    .side-bar-title {
+        margin: 0;
+        padding: 0;
+        font-size: 1.15rem;
+        align-self: center;
+    }
+
+    .side-bar-menu {
+        padding-bottom: 0;
+    }
+
+    .side-bar-menu p {
+        width: 100%;
+        font-size: medium;
+    }
+
+}
