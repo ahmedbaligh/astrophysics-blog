@@ -6,6 +6,13 @@
 
 /* ----------------------------------------------- Global ----------------------------------------------------*/
 
+.page-container {
+	width: 100vw !important;
+	height: 100vh;
+	max-width: 100vw;
+	overflow-x: hidden;
+}
+
 main {
 	width: inherit;
 	background-color: #fcfcfc;
@@ -28,20 +35,19 @@ h4 {
 
 
 
-
 /*----------------------------------------------- Cards -----------------------------------------------------*/
 
 
 .container {
-	margin: 30px 120px 30px 50px;
-	padding: 10px 70px 100px 70px;
+	margin: 30px 70px 30px;
+	padding: 10px 30px 100px;
 	border: solid 1px #dce3e5;
-    background-color: rgba(238, 238, 238, 0.5);
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	grid-template-rows: 1.8em repeat(3, 1fr);
 	grid-row-gap: 6em;
 	grid-column-gap: 6em;
+	box-shadow: 5px 5px 14px 3px grey;
 }
 
 .page-sub-title {
@@ -88,24 +94,17 @@ img {
 
 .side-bar {
     order: -1;
-    background-color: rgba(238, 238, 238, 0.5);
 	border: solid 1px #dce3e5;
 	margin: 30px 30px 0;
 }
 
 
-.side-bar:before {
+.side-bar-wrap:before {
     display: block;
     background-image: linear-gradient(-272deg,#206584,#83d0f2);
     content: '';
     height: 4px;
     margin-bottom: 20px;
-}
-
-.side-bar-menu {
-    margin-bottom: 20px;
-	padding: 0 80px 5px 0;
-	padding-left: 20px;
 }
 
 .side-bar h2 {
@@ -116,8 +115,13 @@ img {
     line-height: 1.2;
 }
 
+.side-bar-menu {
+    margin-bottom: 20px;
+	padding: 0 80px 5px 30px;
+}
+
 .side-bar-menu li {
-	font-size: .88889rem;
+	font-size: 0.9rem;
 	margin: 10px 0;
 	color: #3d7e9a;
 }
@@ -217,7 +221,7 @@ img {
 
 
 
-@media(min-width: 900px) and (max-width: 1320px){
+@media(min-width: 900px) and (max-width: 1200px){
 
 
 	main {

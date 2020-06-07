@@ -3,13 +3,14 @@
 html {
 	box-sizing: border-box;
 	margin: 0;
-  }
-  *, *:before, *:after {
+	width: 100vw;
+}
+
+*, *:before, *:after {
 	box-sizing: inherit;
-  }
+}
   
 body {
-	width: 100vw;
 	height: 100vh;
     color: #343434;
     background-color: #fafbfc;
@@ -17,10 +18,9 @@ body {
     font-family: Arial, x-locale-body, sans-serif;
     letter-spacing: -.00278rem;
 	font-size: 1rem;
-	overflow-x: hidden;
 }
 
-body, h1, h2, h3, h4, h5, ul, li, img, a, figure, blockquote {
+body, h1, h2, h3, h4, h5, ul, li, img, a {
 	margin: 0;
 	padding: 0;
 	border: 0;
