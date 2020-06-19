@@ -57,18 +57,18 @@ ul {
 }
 
 .dynamic-bar .side-bar-menu {
-	justify-content: center;
+	justify-content: space-around;
 	background-color: #fafbfc;
 	border-bottom: 2px solid #84206e;
 }
 
 .dynamic-bar li {
 	font-size: 1.1em;
-	margin: 10px;
+	margin: 10px 0;
 }
 
 .dynamic-bar a {
-	padding: 0.8em;
+	padding: 10px;
 	font-weight: bold;
 	color: #000;
 }
@@ -84,7 +84,7 @@ ul {
 }
   
 .section-on-view {
-	box-shadow: -5px 4px 15px 5px rgb(191, 7, 207);
+	box-shadow: -5px 4px 15px 5px rgb(11, 53, 109);
 }
  
 .go-to-top {
@@ -93,7 +93,8 @@ ul {
 	width: 3em;
 	height: 3em;
 	cursor: pointer;
-	font: 1.1em 'Fira Sans', sans-serif;
+	font: 1.05em 'Fira Sans', sans-serif;
+	text-align: center;
 	color: rgb(11, 72, 153);
 	background-color: #fff;
 	border-radius: 100%;
@@ -226,6 +227,10 @@ form {
 	padding-left: 10px;
 }
 
+#contact {
+	justify-content: center;
+}
+
 #contact img {
 	width: 40px;
 	height: 40px;
@@ -252,7 +257,7 @@ form {
 	}
 	
 	.site-nav-menu {
-		font-size: 1.4em;
+		font-size: 1.25em;
 	}
 
 

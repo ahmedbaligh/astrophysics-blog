@@ -217,7 +217,8 @@ td, th {
 	}
 
 	.side-bar {
-		width: 50%;
+		width: 60%;
+		padding-bottom: 10px;
 	}
 	
 	.side-bar h2 {
@@ -230,7 +231,7 @@ td, th {
 	}
 	
 	.side-bar li {
-		font-size: 0.9em;
+		font-size: 0.8em;
 	}
 
 	.informatory {
@@ -249,7 +250,7 @@ td, th {
 
 	.informatory dd {
 		margin: 0 15px;
-		font-size: 0.9em;
+		font-size: 0.8em;
 	}
 
 	.informatory td {
@@ -258,7 +259,7 @@ td, th {
 	}
 
 	.dynamic-bar li {
-		font-size: 0.73em;
+		font-size: 2.5vw;
 	}
 
 }
