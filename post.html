@@ -2,117 +2,147 @@
 <html lang="en-US">
 	<head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width">
-		<meta name="Astrophysics Blog" content="Personal Blog Website on interesting Astronomy and Physics stuff!">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="Astrophysics Blog" content="Blog on interesting Astronomy and Physics stuff!">
 		<title>Neutron Stars</title>
 		<link href="./styles/blogs.css" rel="stylesheet">
     </head>
     <body>
-        <div class="page-container">
-            <header id="page-header" role="banner">
-                <h1 class="blog-name">Astrophysics Blog</h1>
-                <nav role="navigation">
-                    <ul class="menu">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="./post.html">Blogs</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                        <li><a href="#">About</a></li>
+        <script>
+            //	Adding a GoUp button
+            const winHeight = window.innerHeight;
+            document.addEventListener('DOMContentLoaded', () => {
+                const pageFooter = document.querySelector('.page-footer');
+                const upButton = document.createElement('button');
+                const buttonLink = document.createElement('a');
+                const textHolder = document.createElement('span');
+                textHolder.textContent = 'Top';
+                
+                //	Styling the button
+                upButton.classList.add('go-to-top');
+    
+                //	Adding the GoUp button to the DOM
+                buttonLink.appendChild(textHolder);
+                upButton.appendChild(buttonLink);
+                pageFooter.appendChild(upButton);
+                
+                //	Going to the top of the page
+                upButton.onclick = () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                };
+    
+                //	Hiding the button if it's in the fold of the page
+                window.onscroll = () => {
+                    if (document.documentElement.scrollTop > winHeight*0.3 || document.body.scrollTop > winHeight*0.3) {
+                        upButton.style.position = 'fixed';
+                      } else {
+                        upButton.style.position = 'static';
+                      }
+                };
+            });
+        </script>
+        <header class="page-header" role="banner">
+			<h1 class="blog-name">Astrophysics Blog</h1>
+			<nav role="navigation">
+				<ul class="site-nav-menu">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="./post.html">Blogs</a></li>
+					<li><a href="#contact">Contact</a></li>
+					<li><a href="#">About</a></li>
+				</ul>
+			</nav>
+		</header>
+        <main role="main">
+            <article class="container">
+                <header class="post-header">
+                    <h1 class="post-title">Neutron Stars</h1>
+                    <p class="author"> Ahmed Baligh | Engineering Student</p>
+                    <time datetime="2020-05-20T23:25">May 20, 2020</time>
+                    <ul class="share-menu">
+                        <li><a href="https://www.facebook.com/" target="_blank"><img src="./images/icons/twitter.svg"></a></li>
+                        <li><a href="https://twitter.com/" target="_blank"><img src="./images/icons/facebook.svg"></a></li>
+                        <li><a href="https://www.linkedin.com" target="_blank"><img src="./images/icons/linkedin.svg"></a></li>
                     </ul>
-                </nav>
-            </header>
-            <main role="main">
-                <article class="container">
-                    <header class="post-header">
-                        <h2 class="post-title">Neutron Stars</h2>
-                        <p class="author"> Ahmed Baligh | Engineering Student</p>
-                        <time datetime="2020-05-20T23:25">May 20, 2020</time>
-                        <ul class="share-menu">
-                            <li><a href="https://www.facebook.com/" target="_blank"><img src="./images/icons/twitter.svg"></a></li>
-                            <li><a href="https://twitter.com/" target="_blank"><img src="./images/icons/facebook.svg"></a></li>
-                            <li><a href="https://www.linkedin.com" target="_blank"><img src="./images/icons/linkedin.svg"></a></li>
-                        </ul>
-                    </header>
-                    <section class="post-content">
-                        <h3>Introduction</h3>
-                        <p>A neutron star is the collapsed core of a giant star which before collapse had a total mass of between 10 and 29 solar masses. Neutron stars are the smallest and densest stars, excluding black holes and hypothetical white holes, quark stars, and strange stars. Neutron stars have a radius on the order of 10 kilometres (6.2 mi) and a mass of about 1.4 solar masses. They result from the supernova explosion of a massive star, combined with gravitational collapse, that compresses the core past white dwarf star density to that of atomic nuclei.</p>
-                        <figure>
-                            <img src="./images/neutron-star.jpg">
-                            <figcaption>An exploding neutron star.</figcaption>
-                        </figure>
-                    </section>
-                    <section class="post-content">
-                        <h3>Formation</h3>
-                        <p>Any main-sequence star with an initial mass of above 8 times the mass of the sun (8 M☉) has the potential to produce a neutron star. As the star evolves away from the main sequence, subsequent nuclear burning produces an iron-rich core. When all nuclear fuel in the core has been exhausted, the core must be supported by degeneracy pressure alone. Further deposits of mass from shell burning cause the core to exceed the Chandrasekhar limit. Electron-degeneracy pressure is overcome and the core collapses further, sending temperatures soaring to over 5×109 K. At these temperatures, photodisintegration (the breaking up of iron nuclei into alpha particles by high-energy gamma rays) occurs. As the temperature climbs even higher, electrons and protons combine to form neutrons via electron capture, releasing a flood of neutrinos. When densities reach nuclear density of 4×1017 kg/m3, a combination of strong force repulsion and neutron degeneracy pressure halts the contraction. The infalling outer envelope of the star is halted and flung outwards by a flux of neutrinos produced in the creation of the neutrons, becoming a supernova. The remnant left is a neutron star. If the remnant has a mass greater than about 3 M☉, it collapses further to become a black hole.</p>
-                    </section>
-                    <section class="post-content">
-                        <h3>Properties</h3>
-                        <h4>Mass and temperature</h4>
-                        <p>A neutron star has a mass of at least 1.1 solar masses (M☉). The upper limit of mass for a neutron star is called the Tolman–Oppenheimer–Volkoff limit and is generally held to be around 2.1 M☉, but a recent estimate puts the upper limit at 2.16 M☉. The maximum observed mass of neutron stars is about 2.14 M☉ for PSR J0740+6620 discovered in September, 2019. Compact stars below the Chandrasekhar limit of 1.39 M☉ are generally white dwarfs whereas compact stars with a mass between 1.4 M☉ and 2.16 M☉ are expected to be neutron stars, but there is an interval of a few tenths of a solar mass where the masses of low-mass neutron stars and high-mass white dwarfs can overlap. It is thought that beyond 2.16 M☉ the stellar remnant will overcome the strong force repulsion and neutron degeneracy pressure so that gravitational collapse will occur to produce a black hole, but the smallest observed mass of a stellar black hole is about 5 M☉. Between 2.16 M☉ and 5 M☉, hypothetical intermediate-mass stars such as quark stars and electroweak stars have been proposed, but none have been shown to exist.</p>
-                        <h4>Density and pressure</h4>
-                        <p>Neutron stars have overall densities of 3.7×1017 to 5.9×1017 kg/m3 (2.6×1014 to 4.1×1014 times the density of the Sun), which is comparable to the approximate density of an atomic nucleus of 3×1017 kg/m3. The neutron star's density varies from about 1×109 kg/m3 in the crust—increasing with depth—to about 6×1017 or 8×1017 kg/m3 (denser than an atomic nucleus) deeper inside. A neutron star is so dense that one teaspoon (5 milliliters) of its material would have a mass over 5.5×1012 kg, about 900 times the mass of the Great Pyramid of Giza. In the enormous gravitational field of a neutron star, that teaspoon of material would weigh 1.1×1025 N, which is 15 times what the Moon would weigh if it were placed on the surface of the Earth. The entire mass of the Earth at neutron star density would fit into a sphere of 305 m in diameter (the size of the Arecibo Observatory). The pressure increases from 3.2×1031 to 1.6×1034 Pa from the inner crust to the center.</p>
-                    </section>
-                    <footer class="post-footer">
-                        <div class="author-info">
-                            <p class="written-by">Written by:</p>
-                            <div class="author">
-                                <img src="./images/avatars/boy.svg" alt="Author Avatar">
-                                <p>Ahmed Baligh</p>
-                            </div>
-                            <p>Computer Engineering Student | Faculty of Engineering, Mansoura University</p>
-                            <blockquote class="bio">
-                                <p>I am a senior student pursuing my Bachelor's degree in Computers and Systems Engineering, fresh Front-end Web Developer, and a freelance English-Arabic Translator. I have a burning passion for Astrophysics, which I recently started to self-learn through online courses from several top universities—in hopes of future accreditation and graduate studies. Moreover, I am currently taking an online comprehensive Master's of Business Administration (MBA) course, which is further improving my business-related knowledge and broadening my language skills. Having this broad continuous educational journey as well as being both solution and detail-oriented, I am completely comfortable working in a wide variety of work environments within the scope of my qualifications.</p>
-                                <cite>–– Ahmed Baligh</cite>
-                            </blockquote>
-                        </div>
-                    </footer>
-                </article>
-                <aside role="complementary" class="side-bar">
-                    <h2 class="side-bar-title">Popular Reads</h2>
-                    <div class="side-bar-menu">
-                        <img src="./images/quasar.jpg" >
-                        <p><a href="#quasars">Unravelling the Mystery of Quasars</a></p>
+                </header>
+                <section class="post-content">
+                    <h2>Introduction</h2>
+                    <p>A neutron star is the collapsed core of a giant star which before collapse had a total mass of between 10 and 29 solar masses. Neutron stars are the smallest and densest stars, excluding black holes and hypothetical white holes, quark stars, and strange stars. Neutron stars have a radius on the order of 10 kilometres (6.2 mi) and a mass of about 1.4 solar masses. They result from the supernova explosion of a massive star, combined with gravitational collapse, that compresses the core past white dwarf star density to that of atomic nuclei.</p>
+                    <figure>
+                        <img src="./images/neutron-star.jpg">
+                        <figcaption>An exploding neutron star.</figcaption>
+                    </figure>
+                </section>
+                <section class="post-content">
+                    <h2>Formation</h2>
+                    <p>Any main-sequence star with an initial mass of above 8 times the mass of the sun (8 M☉) has the potential to produce a neutron star. As the star evolves away from the main sequence, subsequent nuclear burning produces an iron-rich core. When all nuclear fuel in the core has been exhausted, the core must be supported by degeneracy pressure alone. Further deposits of mass from shell burning cause the core to exceed the Chandrasekhar limit. Electron-degeneracy pressure is overcome and the core collapses further, sending temperatures soaring to over 5×109 K. At these temperatures, photodisintegration (the breaking up of iron nuclei into alpha particles by high-energy gamma rays) occurs. As the temperature climbs even higher, electrons and protons combine to form neutrons via electron capture, releasing a flood of neutrinos. When densities reach nuclear density of 4×1017 kg/m3, a combination of strong force repulsion and neutron degeneracy pressure halts the contraction. The infalling outer envelope of the star is halted and flung outwards by a flux of neutrinos produced in the creation of the neutrons, becoming a supernova. The remnant left is a neutron star. If the remnant has a mass greater than about 3 M☉, it collapses further to become a black hole.</p>
+                </section>
+                <section class="post-content">
+                    <h2>Properties</h2>
+                    <h3>Mass and temperature</h3>
+                    <p>A neutron star has a mass of at least 1.1 solar masses (M☉). The upper limit of mass for a neutron star is called the Tolman–Oppenheimer–Volkoff limit and is generally held to be around 2.1 M☉, but a recent estimate puts the upper limit at 2.16 M☉. The maximum observed mass of neutron stars is about 2.14 M☉ for PSR J0740+6620 discovered in September, 2019. Compact stars below the Chandrasekhar limit of 1.39 M☉ are generally white dwarfs whereas compact stars with a mass between 1.4 M☉ and 2.16 M☉ are expected to be neutron stars, but there is an interval of a few tenths of a solar mass where the masses of low-mass neutron stars and high-mass white dwarfs can overlap. It is thought that beyond 2.16 M☉ the stellar remnant will overcome the strong force repulsion and neutron degeneracy pressure so that gravitational collapse will occur to produce a black hole, but the smallest observed mass of a stellar black hole is about 5 M☉. Between 2.16 M☉ and 5 M☉, hypothetical intermediate-mass stars such as quark stars and electroweak stars have been proposed, but none have been shown to exist.</p>
+                    <h3>Density and pressure</h3>
+                    <p>Neutron stars have overall densities of 3.7×1017 to 5.9×1017 kg/m3 (2.6×1014 to 4.1×1014 times the density of the Sun), which is comparable to the approximate density of an atomic nucleus of 3×1017 kg/m3. The neutron star's density varies from about 1×109 kg/m3 in the crust—increasing with depth—to about 6×1017 or 8×1017 kg/m3 (denser than an atomic nucleus) deeper inside. A neutron star is so dense that one teaspoon (5 milliliters) of its material would have a mass over 5.5×1012 kg, about 900 times the mass of the Great Pyramid of Giza. In the enormous gravitational field of a neutron star, that teaspoon of material would weigh 1.1×1025 N, which is 15 times what the Moon would weigh if it were placed on the surface of the Earth. The entire mass of the Earth at neutron star density would fit into a sphere of 305 m in diameter (the size of the Arecibo Observatory). The pressure increases from 3.2×1031 to 1.6×1034 Pa from the inner crust to the center.</p>
+                </section>
+                <footer class="author-info">
+                    <p class="written-by">Written by:</p>
+                    <div class="author">
+                            <img src="./images/avatars/boy.svg" alt="Author Avatar">
+                            <p>Ahmed Baligh</p>
                     </div>
-                    <div class="side-bar-menu">
-                        <img src="./images/exoplanets.jpg" >
-                        <p><a href="#exo">Life beyond our Earth!</a></p>
-                    </div>
-                    <div class="side-bar-menu">
-                        <img src="./images/darkenergy.jpg" >
-                        <p><a href="#dark">The Unsolved Mystery of Dark Energy</a></p>
-                    </div>
-                    <div class="side-bar-menu">
-                        <img src="./images/higgsboson.jpg" >
-                        <p><a href="#higgs">Discovery of the Higgs Boson</a></p>
-                    </div>
-                    <div class="side-bar-menu">
-                        <img src="./images/stringtheory.jpg" >
-                        <p><a href="#string">String Theory and Space-Time Fabric</a></p>
-                    </div>
-                </aside>
-            </main>
-            <footer role="contentinfo" class="page-footer">
-                <div class="questions">
-                    <form action="./success.html" method="get">
-                        <label>Contact Me</label>
-                        <input id="email" type="email" placeholder="Email" required>
-                        <textarea id="message" placeholder="Write your message or question here." required></textarea>
-                        <button type="submit">Send</button>
-                    </form>
+                    <p>Computer Engineering Student | Faculty of Engineering, Mansoura University</p>
+                    <blockquote class="bio">
+                            <p>I am a senior student pursuing my Bachelor's degree in Computers and Systems Engineering, fresh Front-end Web Developer, and a freelance English-Arabic Translator. I have a burning passion for Astrophysics, which I recently started to self-learn through online courses from several top universities—in hopes of future accreditation and graduate studies. Moreover, I am currently taking an online comprehensive Master's of Business Administration (MBA) course, which is further improving my business-related knowledge and broadening my language skills. Having this broad continuous educational journey as well as being both solution and detail-oriented, I am completely comfortable working in a wide variety of work environments within the scope of my qualifications.</p>
+                            <cite>–– Ahmed Baligh</cite>
+                    </blockquote>
+                </footer>
+            </article>
+            <aside role="complementary" class="side-bar">
+                <h2>Popular Reads</h2>
+                <div class="side-bar-menu">
+                    <img src="./images/quasar.jpg" >
+                    <p><a>Unravelling the Mystery of Quasars</a></p>
                 </div>
-                <div class="about">
-                    <nav class="social-nav">
-                        <ul id="contact">
-                            <li><a href="https://www.linkedin.com/in/ahmedbaligh" title="LinkedIn" target="_blank"><img src="./images/icons/linkedin.svg"></a></li>
-                            <li><a href="https://github.com/ahmedbaligh7" title="GitHub" target="_blank"><img src="./images/icons/github.svg"></a></li>
-                            <li><a href="https://twitter.com/ahmed_baligh7" title="Twitter" target="_blank"><img src="./images/icons/twitter.svg"></a></li>
-                            <li><a href="https://www.facebook.com/ahmedbaligh7" title="Facebook" target="_blank"><img src="./images/icons/facebook.svg"></a></li>
-                        </ul>
-                    </nav>
-                    <p>Made using HTML and CSS only</p>
-                    <p>Astrophysics Blog ©2020</p>
-                    <p class="top-link"><a href="#page-header">return to top ⬆</a></p>
+                <div class="side-bar-menu">
+                    <img src="./images/exoplanets.jpg" >
+                    <p><a>Life beyond our Earth!</a></p>
                 </div>
-            </footer>
-        </div>
+                <div class="side-bar-menu">
+                    <img src="./images/darkenergy.jpg" >
+                    <p><a>The Unsolved Mystery of Dark Energy</a></p>
+                </div>
+                <div class="side-bar-menu">
+                    <img src="./images/higgsboson.jpg" >
+                    <p><a>Discovery of the Higgs Boson</a></p>
+                </div>
+                <div class="side-bar-menu">
+                    <img src="./images/stringtheory.jpg" >
+                    <p><a>String Theory and Space-Time Fabric</a></p>
+                </div>
+            </aside>
+        </main>
+        <footer role="contentinfo" class="page-footer">
+			<section class="questions">
+				<form action="./success.html" method="get">
+					<label>Contact Me</label>
+					<input type="email" placeholder="Email" required>
+					<textarea placeholder="Write your message or question here." required></textarea>
+					<button type="submit">Send</button>
+				</form>
+			</section>
+			<section class="about">
+				<nav class="social-nav">
+					<ul id="contact">
+						<li><a href="https://www.linkedin.com/in/ahmedbaligh" title="LinkedIn" target="_blank"><img src="./images/icons/linkedin.svg"></a></li>
+						<li><a href="https://github.com/ahmedbaligh7" title="GitHub" target="_blank"><img src="./images/icons/github.svg"></a></li>
+						<li><a href="https://twitter.com/ahmed_baligh7" title="Twitter" target="_blank"><img src="./images/icons/twitter.svg"></a></li>
+						<li><a href="https://www.facebook.com/ahmedbaligh7" title="Facebook" target="_blank"><img src="./images/icons/facebook.svg"></a></li>
+					</ul>
+				</nav>
+				<p>Made using only HTML and CSS</p>
+				<p>All Articles Rights Reserved ©Wikipedia®</p>
+				<p>Astrophysics Blog ©2020</p>
+			</section>
+        </footer>
+    
     </body>
 </html>

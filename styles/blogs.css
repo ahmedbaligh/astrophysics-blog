@@ -1,29 +1,32 @@
 @import url(./styles.css);
 
-@import url(./resposive.css);
 
-@import url(./main.css);
 
-@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@1,500&family=Caveat:wght@400;700&family=Comfortaa:wght@700&family=Montserrat:ital,wght@0,600;1,600&family=Orbitron:wght@600&display=swap');
-
-     /* --------------------------------------------- Global ------------------------------------------------- */
+             /* --------------------------------------------- Global ------------------------------------------------- */
 
 main {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: start;
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+    "post   post    side"
+    "post   post    side"
+    "post   post    ."
+    "post   post    ."
+    "post   post    ."
+    ;
+    margin: 80px 0;
 }
 
-     /* ---------------------------------------------- Posts ------------------------------------------------ */
+              /* ---------------------------------------------- Posts ------------------------------------------------ */
 
 
 .container {
+    grid-area: post;
     display: flex;
     flex-direction: column;
     border: solid 1px #dce3e5;
-    background-color: rgba(238, 238, 238, 0.5);
-    margin: 30px 50px;
+    margin: 0 40px;
 }
 
 .post-header {
@@ -61,7 +64,7 @@ main {
 
 .post-header img:hover {
 	border-radius: 100%;
-	background-color: rgba(0, 110, 255, 0.808);
+	background-color: rgb(158, 11, 172);
 }
 
 .post-content {
@@ -72,33 +75,27 @@ main {
     justify-content: space-around;
 }
 
-.post-content h3 {
-    text-decoration: underline;
-    font-style: normal;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 1.3em;
-    line-height: 1;
-    margin: 15px 0 0px;
+.post-content h2 {
+    font: 1.6em/1.6 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 0.02em;
+    margin-top: 10px;
 }
 
-.post-content h4 {
-    font-style: italic;
+.post-content h3 {
     text-decoration: underline;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 1.1em;
-    margin: 25px 0 10px;
-    line-height: 0.7;
+    font-family: 1em/0.7 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 15px 0 5px;
 }
 
 .post-content img {
-    width: 480px;
-    height: 360px;  
+    width: 80%;
+    min-width: 60%;
     border-radius: 10px;
 }
 
 figcaption {
     font-style: italic;
-    font-size: small;
+    font-size: 0.8em;
 }
 
 .author-info {
@@ -111,217 +108,177 @@ figcaption {
 
 }
 
-.post-footer p {
+.author-info p {
     font-style: italic;
-    font-size: large;
-    margin: 5px 0;
+    font-size: 1.1em;
+    margin-bottom: 15px;
 }
 
 .author p {
     font-style: normal;
-    font-weight: 700;
-    font-size: larger;
-
+    font-weight: 600;
+    font-size: 1.3em;
 }
 
-.post-footer img {
-    width: 50px;
-    height: 50px;
+.author-info img {
+    width: 65px;
+    height: 65px;
     float: left;
-    margin: 0 20px 10px 0;
+    margin-right: 20px;
 }
 
 .bio {
     margin: 15px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: small;
+    font: 0.75em 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .bio p {
-    font-size: medium;
-    font-style: italic;
+    font-size: 1.2em;
 }
 
 
-    /* -------------------------------------------- Popular Reads ------------------------------------------- */
+                /* ------------------------------------------ Side Bar ------------------------------------------- */
 
 
 .side-bar {
-    order: 1;
-    background-color: rgba(238, 238, 238, 0.5);
-	border: solid 1px #dce3e5;
-    margin: 30px 30px 0 0;
+    grid-area: side;
+    border: solid 1px #dce3e5;
+    max-width: 30vw;
 }
 
 .side-bar:before {
     display: block;
-    background-image: linear-gradient(-272deg,#206584,#83d0f2);
+    background-image: linear-gradient(-272deg,#84206e,#f283f2);
     content: '';
-    height: 4px;
+    height: 5px;
     margin-bottom: 20px;
 }
 
-.side-bar-menu {
-    display: inline-flex;
-    flex-direction: row;
-    align-items: center;
-    margin-bottom: 20px;
-    padding: 0 0px 20px 20px;
-}
-
-.side-bar-title {
-	font-family: 'Comfortaa', cursive;
-	margin: 25px 70px 40px;
-	padding: 0 0 0 10px;
-    font-size: 1.4rem;
-    line-height: 1.2;
+.side-bar h2 {
+	font: 1.5em 'Comfortaa', cursive;
+	margin-bottom: 40px;
     text-align: center;
-}
-
-.side-bar-menu p {
-    width: 240px;
-    margin-left: 20px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: large;
-    font-weight: 400;
-    line-height: 1.2;
-    color: #3d7e9a;
-}
-
-.side-bar-menu a:hover {
-	color: rgba(0, 110, 255, 0.808);
 }
 
 .side-bar img {
     width: 100px;
-    height: 70px;
     border-radius: 8px;
+}
+
+.side-bar-menu {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-left: 20px;
+}
+
+.side-bar-menu p {
+    width: fit-content;
+    margin-left: 20px;
+    font: 300 1.05em/1.6 Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(158, 11, 172);
+}
+
+.side-bar-menu a:hover {
+    color: rgba(217, 8, 224, 0.8);
+    cursor: pointer;
 }
 
 
 /* ----------------------------------------------------- Resposive --------------------------------------------------- */
 
 
-@media(min-width: 324px) and (max-width: 1200px){
+@media(min-width: 320px) and (max-width: 950px){
 
          /* -------------------- Global -------------------------- */
 
     main {
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
+        grid-template-areas:
+        "post   post    post"
+        "post   post    post"
+        "post   post    post"
+        "side   side    side"
+        ;
+        gap: 40px
     }
 
-        /* ---------------------- Posts -------------------------- */
-
+        /* ---------------------- Post -------------------------- */
 
     .container {
-        display: flex;
-        flex-direction: column;
-        width: 85%;
+        margin: 0 20px;
     }
-
+    
     .post-title {
-        font-size: 1.4rem;
+        font-size: 1.6em;
     }
-
-    .author, time {
-        font-size: 0.7em;
-    }
-
+    
     .post-header img {
-        width: 37px;
-        height: 37px;
-    }
-
-    .post-content {
-        margin: 25px;
-        justify-content: space-between;
-    }
-
-    .post-content h3 {
-        font-size: 1.15em;
-        font-style: normal;
-    }
-
-    .post-content h4 {
-        font-size: 1em;
-        margin: 20px 0 0;
-        line-height: 1;
-    }
-
-    .post-content p {
-        margin: 15px 0px 10px;
-		width: 92%;
-		font-size: small;
-    }
-
-    .post-content img {
-        width: 92%;
-		height: 60%;
-    }
-
-    .author-info {
-        margin: 25px;
-        justify-content: space-around;
-    }
-
-    .post-footer > p {
-		width: 92%;
-        font-size: medium;
-        margin: 5px 0 15px;
-        text-decoration: underline;
-    }
-
-    .post-footer p {
-		width: 92%;
-        font-size: small;
-        font-style: normal;
-    }
-
-    .author p {
-        font-size: medium;
-        width: 92%;
-    }
-
-    .post-footer img {
         width: 40px;
         height: 40px;
     }
+    
+    .post-content h2 {
+        font-size: 1.25em;
+    }
+    
+    .post-content h3 {
+        font-size: 0.95em;
+        margin: 5px 0;
+    }
+    
+    .container p {
+        font-size: 0.85em;
+    }
 
+    figure {
+        margin: 0;
+    }
+
+    .post-content img {
+        width: 100%;
+    }
+    
+    figcaption {
+        padding-left: 7px;
+    }
+    
+    .author-info p {
+        font-size: 0.9em;
+    }
+    
+    .author p {
+        font-size: 1.15em;
+    }
+    
+    .author-info img {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .bio {
+        margin-top: 10px;
+        font-size: 0.72em;
+    }
+    
     .bio p {
-        font-size: small;
-        font-weight: 500;
-        font-style: italic;
+        font-size: 1em;
     }
 
 
-        /* -------------------- Popular Reads ---------------------- */
+        /* -------------------- Side Bar ---------------------- */
 
 
     .side-bar {
-        margin: 30px 0 0;
-		padding: 0 0 50px;
-        width: 85%;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 10px 6em repeat(5, 1fr);
-    }
-
-    .side-bar-title {
-        margin: 0;
-        padding: 0;
-        font-size: 1.15rem;
-        align-self: center;
+        max-width: 75vw;
+        justify-self: center;
     }
 
     .side-bar-menu {
-        padding-bottom: 0;
+        padding: 0 25px;
     }
 
     .side-bar-menu p {
-        width: 100%;
-        font-size: medium;
+        font-size: 1em;
     }
 
 }
