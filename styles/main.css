@@ -1,70 +1,49 @@
 @import url(./styles.css);
 
-@import url(./resposive.css);
-
-@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@1,500&family=Caveat:wght@400;700&family=Comfortaa:wght@700&family=Montserrat:ital,wght@0,600;1,600&family=Orbitron:wght@600&display=swap');
-
-/* ----------------------------------------------- Global ----------------------------------------------------*/
-
-.page-container {
-	width: 100vw !important;
-	height: 100vh;
-	max-width: 100vw;
-	overflow-x: hidden;
-}
+            /* ----------------------------------------------- Global ----------------------------------------------------*/
 
 main {
-	width: inherit;
 	background-color: #fcfcfc;
-	display: flex;
-	flex-direction: row;
-	align-items: flex-start;
-	justify-content: space-between;
-	margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 6em;
 }
 
-h3 {
-	font-size: x-small;
-	font-style: italic;
+h2 {
+    font: 2.3em 'Comfortaa', cursive;
 }
 
 h4 {
-	font-family: 'Orbitron', sans-serif;
-	font-size: large;
+	font: 1.2em 'Orbitron', sans-serif;
 }
 
 
+            /*----------------------------------------------- Cards -----------------------------------------------------*/
 
-/*----------------------------------------------- Cards -----------------------------------------------------*/
 
-
-.container {
-	margin: 30px 70px 30px;
-	padding: 10px 30px 100px;
-	border: solid 1px #dce3e5;
+.popular-reads {
+    margin: 0 20px 10em;
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	grid-template-rows: 1.8em repeat(3, 1fr);
-	grid-row-gap: 6em;
-	grid-column-gap: 6em;
-	box-shadow: 5px 5px 14px 3px grey;
+    grid-template-columns: repeat(auto-fill, minmax(22em, 1fr));
+	grid-row-gap: 4.5em;
 }
 
-.page-sub-title {
-	grid-area: 1/1/2/3;
-	font-family: 'Comfortaa', cursive;
-	font-size: 2em;
-	justify-self: center;
-	margin-top: 30px;
+main > h2 {
+    margin: 0 0 70px 45px;
 }
 
 .card {
-	width: 350px;
-	height: 400px;
+	width: 22em;
+    height: 28em;
 	justify-self: center;
 }
 
-img {
+.card h3 {
+    font-style: italic;
+    font-size: 0.8em;
+}
+
+.card img {
 	margin: 10px 0 0;
 	width: 350px;
 	height: 250px;
@@ -72,7 +51,10 @@ img {
 }
 
 .card p {
-	margin: 5px 0px 10px;
+    margin: 5px 0 10px 4px;
+    letter-spacing: -0.05em;
+	line-height: 1.3;
+	/* font-size: 1.2em; */
 }
 
 .card button {
@@ -86,185 +68,197 @@ img {
 }
 
 .card button:hover {
-	background: rgba(47, 48, 97, 80%);
+    background: rgba(47, 48, 97, 80%);
 	padding: 10px;
-  }
-
-/*----------------------------------------------- Sidebar -----------------------------------------------------*/
-
-.side-bar {
-    order: -1;
-	border: solid 1px #dce3e5;
-	margin: 30px 30px 0;
 }
 
 
-.side-bar-wrap:before {
+            /*----------------------------------------- Dynamic Sections ------------------------------------------------*/
+
+.informatory {
+	margin: 0em 3em;
+}			
+
+.informatory h3 {
+    font: 600 2.2em/1.7 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-bottom: 2px solid grey;
+    margin: 0 0 40px;
+}
+
+.dynamic-sec {
+    margin-bottom: 8em;
+    padding: 20px 20px;
+}
+
+.dynamic-sec p {
+    margin: 40px 0 0;
+    font-size: 0.7em;
+    text-align: center;
+}
+
+dt, dd {
+	font-size: 1em;
+    margin: 0 40px;
+    padding-bottom: 10px;
+}
+
+dt {
+    font: 600 1.2em Georgia, 'Times New Roman', Times, serif;
+    margin-top: 15px;
+    
+}
+
+.imp-nums {
+	display: flex;
+	flex-direction: column;
+}
+
+table {
+	margin: 0;
+	padding-bottom: 10px;
+	align-self: center;
+    text-align: center;
+}
+
+caption {
+    margin-bottom: 1.1em;
+    text-align: center;
+}
+
+td, th {
+	padding: 10px 30px;
+}
+
+.fig-container {
+    max-width: 60em;
+    margin-top: 3em;
+}
+
+.fig-container:nth-of-type(even){
+    margin-left: auto;
+    text-align: right; 
+}
+
+.fig-container img {
+    margin: 10px 0 0;
+    margin-right: 15px;
+    border-radius: 7%;
+    border: 2px solid rgb(191, 7, 207);
+    float: left;
+	width: 20%;
+	min-width: 110px;
+}
+
+.fig-container:nth-of-type(even) img {
+    float: right;
+    margin-left: 15px;
+    margin-right: 0;
+}
+
+
+            /*----------------------------------------- Side Bar ------------------------------------------------*/
+
+.side-bar {
+    order: -1;
+    margin: 30px;
+    margin-bottom: 80px;
+    align-self: center;
+    width: 80%;
+    border: solid 1px #dce3e5;
+}
+
+.side-bar nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.side-bar nav:before {
     display: block;
-    background-image: linear-gradient(-272deg,#206584,#83d0f2);
+    background-image: linear-gradient(-272deg,#84206e,#f283f2);
     content: '';
-    height: 4px;
+    height: 5px;
     margin-bottom: 20px;
 }
 
 .side-bar h2 {
-	font-family: 'Comfortaa', cursive;
-	margin: 25px 0 30px;
-	padding: 0 0 0 18px;
-    font-size: 1.4rem;
-    line-height: 1.2;
+	font-size: 1.7em;
+	margin-bottom: 20px;
+    align-self: center;
 }
 
-.side-bar-menu {
+.side-bar .side-bar-menu {
+    width: 80%;
+    align-self: center;
+    justify-content: space-around;
     margin-bottom: 20px;
-	padding: 0 80px 5px 30px;
 }
 
-.side-bar-menu li {
-	font-size: 0.9rem;
-	margin: 10px 0;
-	color: #3d7e9a;
+.side-bar li {
+    justify-content: space-between;
+    padding: 0 5px;
+	font-size: 1em;
+	margin-top: 15px;
+	color: rgb(79, 4, 114);
 }
 
 .side-bar a:hover {
-	color: rgba(0, 110, 255, 0.808);
+	color: rgba(217, 8, 224, 0.8);
 }
 
 
-/* ----------------------------------------------------- Resposive --------------------------------------------------- */
 
-
-@media(min-width: 324px) and (max-width: 899px){
-
-
-	main {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		margin-bottom: 100px;
+@media(min-width: 320px) and (max-width: 599px){
+	
+	main > h2 {
+		font-size: 1.9em;
+		width: fit-content;
+		margin-top: 70px;
+		border-bottom: 2px solid #333;
 	}
-	
-	h3 {
-		font-size: xx-small;
-	}
-	
-	h4 {
-		font-size: medium;
-	}
-	
-	/*--------------------- Cards --------------------*/
-	
-	
-	.container {
-		display: flex;
-		flex-direction: column;
-		margin: 30px 0 0;
-		padding: 10px 0 50px;
-		width: 75%;
-	}
-	
-	.page-sub-title {
-		font-size: 1.3em;
-		margin-top: 20px;
-		align-self: center;
-	}
-	
-	.card {
-		width: 90%;
-		height: 40%;
-		margin: 40px 0;
-		align-self: center;
-	}
-
-	.card img {
-		width: 92%;
-		height: 60%;
-	}
-	
-	.card p {
-		margin: 5px 0px 10px;
-		width: 90%;
-		font-size: small;
-	}
-	
-
-	/*--------------------------- Sidebar -----------------------------*/
 
 	.side-bar {
-		margin: 0;
+		width: 50%;
 	}
 	
 	.side-bar h2 {
-		font-family: 'Comfortaa', cursive;
-		margin: 25px 0;
-		padding: 0;
-		text-align: center;
-		font-size: 1.1rem;
-		line-height: 1;
+		font-size: 1.3em;
 	}
 
-	.side-bar-menu {
-		display: flex;
-		flex-direction: row;
-		padding: 0;
-	}
-
-	.side-bar-menu li {
-		padding: 0 15px;
-		align-self: center;
-		text-align: center;
-		font-size: small;
-	}
-
-
-}
-
-
-
-@media(min-width: 900px) and (max-width: 1200px){
-
-
-	main {
+	.side-bar .side-bar-menu {
 		flex-direction: column;
 		align-items: center;
 	}
 	
-	/*--------------------- Cards --------------------*/
-	
-	
-	.container {
-		margin: 30px 30px;
-		padding: 10px 20px 100px;
-		grid-column-gap: 2.5em;
-		width: 90%;
-	}
-	
-	.page-sub-title {
-		font-size: 1.8em;
-	}
-	
-
-	/*--------------------------- Sidebar -----------------------------*/
-	
-	.side-bar-wrap {
-		padding: 0 100px 5px;
+	.side-bar li {
+		font-size: 0.9em;
 	}
 
-	.side-bar-menu {
-		display: flex;
-		flex-direction: row;
-		padding: 0;
-	}
-	
-	.side-bar h2 {
-		text-align: center;
-		margin: 30px 0;
-		padding: 0;
-	}
-	
-	.side-bar-menu li {
-		padding: 0 30px;
+	.informatory {
+		margin: 0 2.3em;
 	}
 
+	.informatory h3 {
+		font-size: 1.9em;
+		width: fit-content;
+	}
+
+	.informatory dt {
+		font-size: 1em;
+		margin: 15px 15px 0;
+	}
+
+	.informatory dd {
+		margin: 0 15px;
+		font-size: 0.9em;
+	}
+
+	.informatory td {
+		font-size: 0.8em;
+		padding: 10px 2px;
+	}
+
+	.dynamic-bar li {
+		font-size: 0.73em;
+	}
 
 }
