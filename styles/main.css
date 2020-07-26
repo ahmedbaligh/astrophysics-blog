@@ -71,7 +71,7 @@ main > h2 {
 	text-transform: uppercase;
 }
 
-.card button:hover {
+.card button:hover, .card button:active {
     background: rgba(47, 48, 97, 80%);
 	padding: 10px;
 }
@@ -207,7 +207,7 @@ td, th {
 	color: rgb(79, 4, 114);
 }
 
-.side-bar a:hover {
+.side-bar a:hover, .side-bar a:active {
 	color: rgba(217, 8, 224, 0.8);
 }
 

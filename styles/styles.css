@@ -63,7 +63,7 @@ ul {
 	opacity: 0.6;
 }
 
-.dynamic-bar .side-bar-menu:hover {
+.dynamic-bar .side-bar-menu:hover, .dynamic-bar .side-bar-menu:active {
 	opacity: 1;
 	/* border-bottom: 5px solid #84206e; */
 	background: linear-gradient(270deg, rgba(136,203,171,1) 0%, rgba(0,13,60,1) 80%);
@@ -80,7 +80,7 @@ ul {
 	font-weight: bold;
 }
 
-.dynamic-bar a:hover {
+.dynamic-bar a:hover, .dynamic-bar a:active {
 	background: #333;
 	color: #fff;
 	transition: ease 0.3s all;
@@ -113,17 +113,17 @@ ul {
 	border: 3px solid rgb(11, 72, 153);
 }
 
-.go-to-top:hover {
+.go-to-top:hover, .go-to-top:active {
 	background-color: seagreen;
 	color: #fff;
 	border-color: #fff;
 }
 
-.go-to-top:hover span {
+.go-to-top:hover span, .go-to-top:active span {
 	display: none;
 }
 
-.go-to-top:hover:before {
+.go-to-top:hover::before, .go-to-top:active::before {
 	content: "GO";
 	font-size: 0.9em;
 }
@@ -161,7 +161,7 @@ ul {
 	padding: 15px;
 }
 
-.site-nav-menu a:hover{
+.site-nav-menu a:hover, .site-nav-menu a:active {
 	background-color: rgb(11, 72, 153);
 	border-radius: 100%;
     color: #fafbfc;
@@ -208,6 +208,10 @@ form {
 	margin-bottom: 10px;
 }
 
+.questions input:focus, .questions textarea:focus {
+	outline: 1px solid #32a1ce;
+}
+
 .questions textarea {
     resize: vertical;
 	height: 10em;
@@ -226,7 +230,7 @@ form {
     font-size: 0.8em;
 }
 
-.questions button:hover {
+.questions button:hover, .questions button:active {
 	background-color: rgba(11, 72, 153);
 	cursor: pointer;
 }
@@ -253,7 +257,7 @@ form {
 	padding: 5px;
 }
 
-#contact img:hover {
+#contact img:hover, #contact img:active {
 	border-radius: 100%;
 	background-color: rgba(11, 72, 153);
 }

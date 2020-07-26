@@ -62,7 +62,7 @@ main {
 	padding: 10px;
 }
 
-.post-header img:hover {
+.post-header img:hover, .post-header img:active {
 	border-radius: 100%;
 	background-color: rgb(158, 11, 172);
 }
@@ -179,7 +179,7 @@ figcaption {
     color: rgb(158, 11, 172);
 }
 
-.side-bar-menu a:hover {
+.side-bar-menu a:hover, .side-bar-menu a:active {
     color: rgba(217, 8, 224, 0.8);
     cursor: pointer;
 }
