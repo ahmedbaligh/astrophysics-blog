@@ -51,15 +51,23 @@ ul {
 
 .dynamic-bar {
 	order: -1;
-	background: #fff;
+	position: sticky;
 	top: 0;
 	width: 100%;
 }
 
 .dynamic-bar .side-bar-menu {
+	color: #F7FFF7;
 	justify-content: space-around;
-	background-color: #fafbfc;
-	border-bottom: 2px solid #84206e;
+	background-color: grey;
+	opacity: 0.6;
+}
+
+.dynamic-bar .side-bar-menu:hover {
+	opacity: 1;
+	/* border-bottom: 5px solid #84206e; */
+	background: linear-gradient(270deg, rgba(136,203,171,1) 0%, rgba(0,13,60,1) 80%);
+	/* color: black; */
 }
 
 .dynamic-bar li {
@@ -70,7 +78,6 @@ ul {
 .dynamic-bar a {
 	padding: 10px;
 	font-weight: bold;
-	color: #000;
 }
 
 .dynamic-bar a:hover {
@@ -85,6 +92,11 @@ ul {
   
 .section-on-view {
 	box-shadow: -5px 4px 15px 5px rgb(11, 53, 109);
+}
+
+.card-highlight {
+	box-shadow: -3px 5px 10px 5px rgb(11, 53, 109);
+	border-radius: 10px;
 }
  
 .go-to-top {
@@ -121,6 +133,8 @@ ul {
 
 .page-header {
 	background-image: url(../images/opo0501a.jpg);
+	background-position: right;
+	background-attachment: fixed;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -130,20 +144,21 @@ ul {
 .blog-name {
     font: 700 5em 'Caveat', cursive;
     align-self: center;
-	color: rgb(191, 7, 207);
+	color: rgb(255, 30, 255);
     margin-bottom: 1em;
     letter-spacing: 0.1em;
 }
 
 .site-nav-menu {
     justify-content: space-between;
-    color: rgba(217, 8, 224, 0.8);
-	font-size: 1.1em;
-    font-weight: 600;
+    color: rgb(255, 7, 255);
+	font-size: 1.15em;
+	font-weight: 600;
+	letter-spacing: 0.08em;
 }
 
 .site-nav-menu a {
-	padding: 10px;
+	padding: 15px;
 }
 
 .site-nav-menu a:hover{

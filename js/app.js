@@ -1,6 +1,7 @@
 //	Global Declrations
 const dySections = Array.from(document.querySelectorAll('.dynamic-sec'));
 const dySecName = Array.from(document.querySelectorAll('.dynamic-sec h3'));
+const cards = Array.from(document.querySelectorAll('.card'));
 const dyList = document.querySelector('.side-bar-menu');
 let fragment = document.createDocumentFragment();
 const winHeight = window.innerHeight;
@@ -44,6 +45,17 @@ document.addEventListener('DOMContentLoaded', dyNav);
 //	Add the dynamic navigation menu to the DOM
 dyList.appendChild(fragment);
 
+// Highlighting selected card
+cards.forEach(card => {
+	let cardSelected = false;
+	card.addEventListener('mouseover', () => {
+		card.classList.add('card-highlight')
+	});
+	card.addEventListener('mouseout', () => {
+		card.classList.remove('card-highlight')
+	});
+});
+
 //	Determine if an element is in Viewport
 const isInViewport = (elem) => {
     const bounds = elem.getBoundingClientRect();
@@ -59,23 +71,36 @@ const isInViewport = (elem) => {
 //	Hiding the navigation bar while not scrolling
 const navBar = document.querySelector('aside');
 const onThisPage = document.querySelector('aside h2');
-let waitTime = null;
+// let waitTime = null;
+// window.addEventListener('scroll', () => {
+// 	if (waitTime !== null){
+//         // clearTimeout(waitTime);
+//         if (navBar.getBoundingClientRect().top <= -20){
+//             navBar.classList.remove('side-bar');
+//             navBar.style.position = 'sticky';
+//             navBar.classList.add('dynamic-bar');
+//             onThisPage.style.display = 'none';
+//         }
+// 	}
+// 	waitTime = setTimeout(() => {
+//         navBar.classList.remove('dynamic-bar');
+//         navBar.classList.add('side-bar');
+//         navBar.style.position = 'static';
+//         onThisPage.style.display = 'block';
+// 	}, 700);
+// });
 window.addEventListener('scroll', () => {
-	if (waitTime !== null){
-        clearTimeout(waitTime);
-        if (navBar.getBoundingClientRect().top <= -20){
-            navBar.classList.remove('side-bar');
-            navBar.style.position = 'fixed';
-            navBar.classList.add('dynamic-bar');
-            onThisPage.style.display = 'none';
-        }
-	}
-	waitTime = setTimeout(() => {
-        navBar.classList.remove('dynamic-bar');
-        navBar.classList.add('side-bar');
-        navBar.style.position = 'static';
-        onThisPage.style.display = 'block';
-	}, 700);
+	setTimeout(() => {
+		if (navBar.getBoundingClientRect().top <= -80){
+			navBar.classList.remove('side-bar');
+			navBar.classList.add('dynamic-bar');
+			onThisPage.style.display = 'none';
+		} else if (navBar.getBoundingClientRect().top >= 20) {
+			navBar.classList.add('side-bar');
+			navBar.classList.remove('dynamic-bar');
+			onThisPage.style.display = 'block';
+		}
+	}, 100);
 });
 
 //	Adding a GoUp button
