@@ -71,24 +71,6 @@ const isInViewport = (elem) => {
 //	Hiding the navigation bar while not scrolling
 const navBar = document.querySelector('aside');
 const onThisPage = document.querySelector('aside h2');
-// let waitTime = null;
-// window.addEventListener('scroll', () => {
-// 	if (waitTime !== null){
-//         // clearTimeout(waitTime);
-//         if (navBar.getBoundingClientRect().top <= -20){
-//             navBar.classList.remove('side-bar');
-//             navBar.style.position = 'sticky';
-//             navBar.classList.add('dynamic-bar');
-//             onThisPage.style.display = 'none';
-//         }
-// 	}
-// 	waitTime = setTimeout(() => {
-//         navBar.classList.remove('dynamic-bar');
-//         navBar.classList.add('side-bar');
-//         navBar.style.position = 'static';
-//         onThisPage.style.display = 'block';
-// 	}, 700);
-// });
 window.addEventListener('scroll', () => {
 	setTimeout(() => {
 		if (navBar.getBoundingClientRect().top <= -80){

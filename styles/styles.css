@@ -81,13 +81,13 @@ ul {
 }
 
 .dynamic-bar a:hover, .dynamic-bar a:active {
-	background: #333;
+	background: rgb(7, 150, 207);
 	color: #fff;
-	transition: ease 0.3s all;
+	transition: ease 0.7s all;
 }
 
 .sec-link-click {
-	color: rgba(217, 8, 224, 0.8) !important;
+	color: rgb(0, 247, 255) !important;
 }
   
 .section-on-view {
