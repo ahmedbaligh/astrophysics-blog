@@ -49,7 +49,7 @@ const isInViewport = (elem) => {
     const bounds = elem.getBoundingClientRect();
     const top = bounds.top;
     const bottom = bounds.bottom;
-	if (bounds.height <= winHeight){
+	if (bounds.height <= winHeight * 0.9){
         return (top >= 0 && bottom <= winHeight);
     } else {
         return ((top <= winHeight*0.5 && top >= 0) || (bottom >= winHeight*0.5 && bottom <= 20*winHeight && top <= winHeight*0.5));
