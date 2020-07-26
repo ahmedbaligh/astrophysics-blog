@@ -37,8 +37,8 @@ main > h2 {
 
 .card {
 	padding: 25px;
-	width: 25em;
-    height: 30em;
+	width: 23.5em;
+    height: 29.5em;
 	justify-self: center;
 }
 
@@ -49,8 +49,8 @@ main > h2 {
 
 .card img {
 	margin: 10px 0 0;
-	width: 350px;
-	height: 250px;
+	width: 330px;
+	height: 240px;
 	border-radius: 10px;
 }
 
