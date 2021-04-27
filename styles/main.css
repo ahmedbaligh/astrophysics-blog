@@ -1,271 +1,123 @@
+/*                      Import General Website Styles                       */
+
 @import url(./styles.css);
 
-            /* ----------------------------------------------- Global ----------------------------------------------------*/
+/*                      Popular Reads                       */
 
-main {
-	background-color: #fcfcfc;
-    display: flex;
-    flex-direction: column;
-    margin: 4em 0 6em;
+.popular-reads,
+.informatory {
+  margin: 4rem 0 6rem;
 }
 
-h2 {
-    font: 2.3em 'Comfortaa', cursive;
+.popular-reads > h2 {
+  padding: 0 40px 20px 0;
+  border-bottom: 4px double grey;
 }
 
 h4 {
-	font: 1.2em 'Orbitron', sans-serif;
-}
-
-
-            /*----------------------------------------------- Cards -----------------------------------------------------*/
-
-
-.popular-reads {
-    margin: 0 35px 10em;
-	display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(22em, 1fr));
-	grid-row-gap: 4.5em;
-}
-
-main > h2 {
-	margin: 50px 0 70px 70px;
-	padding: 0 40px 20px 0;
-	border-bottom: 7px double grey;
-	width: 80%;
-}
-
-.card {
-	padding: 25px;
-	width: 23.5em;
-    height: 29.5em;
-	justify-self: center;
+  font: 1.2em 'Orbitron', sans-serif;
 }
 
 .card h3 {
-    font-style: italic;
-    font-size: 0.8em;
+  font-size: 0.8em;
+  font-style: italic;
 }
 
-.card img {
-	margin: 10px 0 0;
-	width: 330px;
-	height: 240px;
-	border-radius: 10px;
+.popular-reads img {
+  margin-bottom: 5px;
+  min-width: 330px;
+  min-height: 240px;
+  border-radius: 8px;
 }
 
-.card p {
-    margin: 5px 0 10px 4px;
-    letter-spacing: -0.05em;
-	line-height: 1.3;
-	/* font-size: 1.2em; */
+.popular-reads .btn {
+  font-size: 0.9em;
+  color: #f7fff7;
+  background: #33383b;
+  padding: 6px;
+  border-radius: 7px;
+  border-color: #fafbfc;
+  text-transform: uppercase;
 }
 
-.card button {
-	display: inline-block;
-	color: #F7FFF7;
-	background: #33383b;
-  	padding: 8px;
-  	border-radius: 7px;
-	border-color: #fafbfc;
-	text-transform: uppercase;
+.popular-reads .btn:hover,
+.popular-reads .btn:active {
+  background: linear-gradient(90deg, rgb(0, 37, 116) 0%, rgb(19, 46, 145) 100%);
+  padding: 6px 10px;
 }
 
-.card button:hover, .card button:active {
-    background: rgba(47, 48, 97, 80%);
-	padding: 10px;
-}
-
-
-            /*----------------------------------------- Dynamic Sections ------------------------------------------------*/
-
-.informatory {
-	margin: 0em 3em;
-	padding: 10px;
-}			
-
-.informatory h3 {
-    font: 600 2.2em/1.7 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    border-bottom: 2px solid grey;
-    margin: 0 0 40px;
-}
+/*                      Dynamic Sections                            */
 
 .dynamic-sec {
-    margin-bottom: 8em;
-    padding: 50px;
+  margin-bottom: 3em;
 }
 
 .dynamic-sec p {
-    margin: 40px 0 0;
-    font-size: 0.7em;
-    text-align: center;
+  margin: 40px 0 0;
+  font-size: 0.7em;
+  text-align: center;
 }
 
-dt, dd {
-	font-size: 1em;
-    margin: 0 40px;
-    padding-bottom: 10px;
+.dynamic-sec header {
+  padding: 0 1.2rem;
+  margin-bottom: 1.5rem;
+  /* border: 2px dotted grey; */
+  align-items: center;
+}
+
+.dynamic-sec h3 {
+  font: 2.2em/1.7 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+    sans-serif;
+  margin: 0;
+}
+
+.dynamic-sec button {
+  font-size: 2.5rem;
+}
+
+dt,
+dd {
+  font-size: 1em;
+  margin: 0 30px;
+  padding-bottom: 8px;
 }
 
 dt {
-    font: 600 1.2em Georgia, 'Times New Roman', Times, serif;
-    margin-top: 15px;
-    
-}
-
-.imp-nums {
-	display: flex;
-	flex-direction: column;
+  font: 600 Georgia, 'Times New Roman', Times, serif;
+  margin-top: 15px;
 }
 
 table {
-	margin: 0;
-	padding-bottom: 10px;
-	align-self: center;
-    text-align: center;
+  text-align: center;
 }
 
 caption {
-    margin-bottom: 1.1em;
-    text-align: center;
+  caption-side: top;
+  margin-bottom: 1.1em;
+  text-align: center;
 }
 
-td, th {
-	padding: 10px 30px;
+.fig-container dt {
+  font-size: 1.3rem;
 }
 
-.fig-container {
-    max-width: 60em;
-    margin-top: 3em;
-}
-
-.fig-container:nth-of-type(even){
-    margin-left: auto;
-    text-align: right; 
+.fig-container:nth-of-type(even) {
+  margin-left: auto;
+  text-align: right;
 }
 
 .fig-container img {
-    margin: 10px 0 0;
-    margin-right: 15px;
-    border-radius: 7%;
-    border: 2px solid rgb(191, 7, 207);
-    float: left;
-	width: 20%;
-	min-width: 110px;
+  margin-right: 15px;
+  border-radius: 7%;
+  border: 2px solid rgb(19, 46, 145);
+  float: left;
+  width: 40%;
+  max-width: 180px;
+  /* min-width: 110px; */
 }
 
 .fig-container:nth-of-type(even) img {
-    float: right;
-    margin-left: 15px;
-    margin-right: 0;
-}
-
-
-            /*----------------------------------------- Side Bar ------------------------------------------------*/
-
-.side-bar {
-	position: static;
-    order: -1;
-    margin: 30px;
-    margin-bottom: 80px;
-    align-self: center;
-    width: 80%;
-    border: solid 1px #dce3e5;
-}
-
-.side-bar nav {
-    display: flex;
-    flex-direction: column;
-}
-
-.side-bar nav:before {
-    display: block;
-    background-image: linear-gradient(-272deg,#84206e,#f283f2);
-    content: '';
-    height: 5px;
-    margin-bottom: 20px;
-}
-
-.side-bar h2 {
-	font-size: 1.7em;
-	margin-bottom: 20px;
-    align-self: center;
-}
-
-.side-bar .side-bar-menu {
-    width: 80%;
-    align-self: center;
-    justify-content: space-around;
-    margin-bottom: 20px;
-}
-
-.side-bar li {
-    justify-content: space-between;
-    padding: 0 5px;
-	font-size: 1em;
-	margin-top: 15px;
-	color: rgb(79, 4, 114);
-}
-
-.side-bar a:hover, .side-bar a:active {
-	color: rgba(217, 8, 224, 0.8);
-}
-
-
-
-@media(min-width: 320px) and (max-width: 599px){
-	
-	main > h2 {
-		font-size: 1.9em;
-		width: fit-content;
-		margin-top: 70px;
-		border-bottom: 2px solid #333;
-	}
-
-	.side-bar {
-		width: 60%;
-		padding-bottom: 10px;
-	}
-	
-	.side-bar h2 {
-		font-size: 1.3em;
-	}
-
-	.side-bar .side-bar-menu {
-		flex-direction: column;
-		align-items: center;
-	}
-	
-	.side-bar li {
-		font-size: 0.8em;
-	}
-
-	.informatory {
-		margin: 0 2.3em;
-	}
-
-	.informatory h3 {
-		font-size: 1.9em;
-		width: fit-content;
-	}
-
-	.informatory dt {
-		font-size: 1em;
-		margin: 15px 15px 0;
-	}
-
-	.informatory dd {
-		margin: 0 15px;
-		font-size: 0.8em;
-	}
-
-	.informatory td {
-		font-size: 0.8em;
-		padding: 10px 2px;
-	}
-
-	.dynamic-bar li {
-		font-size: 2.5vw;
-	}
-
+  float: right;
+  margin-left: 15px;
+  margin-right: 0;
 }

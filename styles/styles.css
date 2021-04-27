@@ -1,380 +1,119 @@
+/*                      Google Fonts Import                     */
+
 @import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@1,500&family=Caveat:wght@400;700&family=Comfortaa:wght@700&family=Montserrat:ital,wght@0,600;1,600&family=Orbitron:wght@600&display=swap');
 
-
-            /* ----------------------------------------------- Global ----------------------------------------------------*/
-
-html {
-	box-sizing: border-box;
-	margin: 0;
-}
-
-*, *:before, *:after {
-	box-sizing: inherit;
-}
-  
-body {
-    background-color: #fafbfc;
-    color: #343434;
-    line-height: 1.6;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    display: grid;
-	grid-template-rows: 45vh 1fr 50vh;
-	grid-row-gap: 0em;
-}
-
-body, h1, h2, h3, h4, h5, ul, img {
-	margin: 0;
-	padding: 0;
-	border: 0;
-}
-
-*:focus {
-    outline: none;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-  
-a:active {
-    color: crimson;
-}
-  
-ul {
-    list-style: none;
-    display: flex;
-}
-
-
-            /*----------------------------------------- Dynamic Styles ------------------------------------------------*/
-
-.dynamic-bar {
-	order: -1;
-	position: sticky;
-	top: 0;
-	width: 100%;
-}
-
-.dynamic-bar .side-bar-menu {
-	color: #F7FFF7;
-	justify-content: space-around;
-	background-color: grey;
-	opacity: 0.6;
-}
-
-.dynamic-bar .side-bar-menu:hover, .dynamic-bar .side-bar-menu:active {
-	opacity: 1;
-	/* border-bottom: 5px solid #84206e; */
-	background: linear-gradient(270deg, rgba(136,203,171,1) 0%, rgba(0,13,60,1) 80%);
-	/* color: black; */
-}
-
-.dynamic-bar li {
-	font-size: 1.1em;
-	margin: 10px 0;
-}
-
-.dynamic-bar a {
-	padding: 10px;
-	font-weight: bold;
-}
-
-.dynamic-bar a:hover, .dynamic-bar a:active {
-	background: rgb(7, 150, 207);
-	color: #fff;
-	transition: ease 0.7s all;
-}
-
-.sec-link-click {
-	color: rgb(0, 247, 255) !important;
-}
-  
-.section-on-view {
-	box-shadow: -5px 4px 15px 5px rgb(11, 53, 109);
-}
-
-.card-highlight {
-	box-shadow: -3px 5px 10px 5px rgb(11, 53, 109);
-	border-radius: 10px;
-}
- 
-.go-to-top {
-	bottom: 60px;
-	right: 35px;
-	width: 3em;
-	height: 3em;
-	cursor: pointer;
-	font: 1.05em 'Fira Sans', sans-serif;
-	text-align: center;
-	color: rgb(11, 72, 153);
-	background-color: #fff;
-	border-radius: 100%;
-	border: 3px solid rgb(11, 72, 153);
-}
-
-.go-to-top:hover, .go-to-top:active {
-	background-color: seagreen;
-	color: #fff;
-	border-color: #fff;
-}
-
-.go-to-top:hover span, .go-to-top:active span {
-	display: none;
-}
-
-.go-to-top:hover::before, .go-to-top:active::before {
-	content: "GO";
-	font-size: 0.9em;
-}
-
-
-            /* -------------------------------------------------- Header -----------------------------------------------*/
-
-.page-header {
-	background-image: url(../images/opo0501a.jpg);
-	background-position: right;
-	background-attachment: fixed;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-	justify-content: center;
-}
+/*                      Header                      */
 
 .blog-name {
-    font: 700 5em 'Caveat', cursive;
-    align-self: center;
-	color: rgb(255, 30, 255);
-    margin-bottom: 1em;
-    letter-spacing: 0.1em;
+  font: 500 2.2rem 'Caveat', cursive;
+}
+
+.navbar-text {
+  margin-left: 230px;
 }
 
 .site-nav-menu {
-    justify-content: space-between;
-    color: rgb(255, 7, 255);
-	font-size: 1.15em;
-	font-weight: 600;
-	letter-spacing: 0.08em;
+  letter-spacing: 0.08em;
 }
 
 .site-nav-menu a {
-	padding: 15px;
+  padding: 15px;
 }
 
-.site-nav-menu a:hover, .site-nav-menu a:active {
-	background-color: rgb(11, 72, 153);
-	border-radius: 100%;
-    color: #fafbfc;
-}
-
-
-            /*----------------------------------------------- Footer -----------------------------------------------------*/
-
+/*                      Footer                      */
 
 .page-footer {
-    background-color: #2e3438;
-	color: #F7FFF7;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-}
-
-.questions {
-	order: 1;
-	margin-right: 25px;
-	padding: 5px 10px;
-}
-
-form {
-	margin: 0px 50px 0px 0px;
-	padding: 0 30px 0 30px;
+  color: #f7fff7;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
 }
 
 .questions label {
-	display: block;
-	margin-bottom: 20px;
-	font-style: italic;
+  display: block;
+  margin-bottom: 20px;
+  font-style: italic;
 }
 
-.questions input, textarea {
-    display: block;
-    border-radius: 3px;
-    background-color: #1f2022;
-	border: none;
-    font-size: 12px;
-    color: #d1d2d2;
-    width: 30em;
-	padding: 10px;
-	margin-bottom: 10px;
+.questions input,
+textarea {
+  display: block;
+  border-radius: 3px;
+  background-color: #1f2022;
+  border: none;
+  font-size: 12px;
+  color: #d1d2d2;
+  width: 30em;
+  padding: 10px;
+  margin-bottom: 10px;
 }
 
-.questions input:focus, .questions textarea:focus {
-	outline: 1px solid #32a1ce;
+.questions input:focus,
+.questions textarea:focus {
+  outline: 1px solid #32a1ce;
 }
 
 .questions textarea {
-    resize: vertical;
-	height: 10em;
+  resize: vertical;
+  height: 10em;
 }
 
 .questions button {
-	background-color: #33383b;
-	color: #fafbfc;
-    width: 6.5em;
-	height: 3em;
-	margin-top: 7px;
-	padding-bottom: 2px;
-    border-radius: 8px;
-	border-color: cornsilk;
-	text-transform: uppercase;
-    font-size: 0.8em;
-}
-
-.questions button:hover, .questions button:active {
-	background-color: rgba(11, 72, 153);
-	cursor: pointer;
-}
-
-.about {
-	align-self: center;
-	margin-left: 20px;
-	padding: 10px 20px 0px 20px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-size: 0.9em;
 }
 
 .about p {
-	font: 0.75em/1 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-	padding-left: 10px;
-}
-
-#contact {
-	justify-content: center;
+  font: 0.75rem/1 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  padding-left: 8px;
 }
 
 #contact img {
-	width: 40px;
-	height: 40px;
-	margin: 10px;
-	padding: 5px;
+  width: 38px;
+  height: 38px;
+  margin-bottom: 10px;
+  padding: 6px;
 }
 
-#contact img:hover, #contact img:active {
-	border-radius: 100%;
-	background-color: rgba(11, 72, 153);
+#contact img:hover,
+#contact img:active {
+  border-radius: 100%;
+  background-color: rgba(11, 72, 153);
+  padding: 3px;
 }
 
+/*                           Go To Top                           */
 
-			/*----------------------------------------------- Responsive ----------------------------------------------------*/
-
-
-
-@media(min-width: 320px) and (max-width: 599px){
-
-	/* ------------------------- Header ----------------------------- */
-
-	.page-header {
-		font-size: 2.3vw;
-	}
-	
-	.site-nav-menu {
-		font-size: 1.25em;
-	}
-
-
-	/* ------------------------- Footer ----------------------------- */
-
-
-	.page-footer {
-		flex-direction: column-reverse;
-		justify-content: center;
-		height: 85vh;
-	}
-
-	.questions {
-		margin: 0 0 20px;
-		padding: 5px 0;
-	}
-
-	form {
-		margin: 40px 0 0;
-		padding: 0;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
-
-	.questions label {
-		font-style: normal;
-	}
-
-	.questions button {
-		width: 70px;
-		font-size: 0.7em;
-	}
-
-	.about {
-		margin: 40px 0 20px;
-		padding: 0;
-	}
-
-	.about p {
-		text-align: center;
-	}
-
+.go-to-top {
+  bottom: 60px;
+  right: 35px;
+  width: 3em;
+  height: 3em;
+  cursor: pointer;
+  font: 1.05em 'Fira Sans', sans-serif;
+  text-align: center;
+  color: rgb(11, 72, 153);
+  background-color: #fff;
+  border-radius: 100%;
+  border: 3px solid rgb(11, 72, 153);
 }
 
+.go-to-top:hover,
+.go-to-top:active {
+  background-color: seagreen;
+  color: #fff;
+  border-color: #fff;
+}
 
+.go-to-top:hover span,
+.go-to-top:active span {
+  display: none;
+}
 
-@media(min-width: 600px) and (max-width: 900px){
-
-	
-	/* ------------------------- Header ----------------------------- */
-
-	.page-header {
-		font-size: 1.8vw;
-	}
-
-	.site-nav-menu {
-		font-size: 1.2em;
-	}
-
-	/* ------------------------- Footer ----------------------------- */
-
-
-	.page-footer {
-		flex-direction: column-reverse;
-		justify-content: center;
-		height: 70vh;
-	}
-
-	.questions {
-		margin: 0 0 20px;
-		padding: 5px 0;
-	}
-
-	form {
-		margin: 40px 0 0;
-		padding: 0;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
-
-	.questions label {
-		font-style: normal;
-	}
-
-	.questions button {
-		width: 70px;
-		font-size: 0.7em;
-	}
-
-	.about {
-		margin: 40px 0 20px;
-		padding: 0;
-	}
-
-	.about p {
-		text-align: center;
-	}
-	
+.go-to-top:hover::before,
+.go-to-top:active::before {
+  content: 'GO';
+  font-size: 0.9em;
 }
